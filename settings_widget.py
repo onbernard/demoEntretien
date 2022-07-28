@@ -31,7 +31,7 @@ class SimSettings(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Simulation Settings")
-        self.setWindowIcon(QIcon(os.path.join(IMG_DIRPATH, "sliders-solid.svg")))
+        self.setWindowIcon(QIcon(os.path.join(IMG_DIRPATH, "equalizer.png")))
         self.setMinimumSize(600,300)
         layout = QGridLayout()
         self.rules = []

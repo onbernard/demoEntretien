@@ -1,22 +1,11 @@
 '''
-Example of using shader storage buffer in compute shader.
-We read from a buffer and write the result to another buffer.
-Every frame we swap the buffers around transforming positions
-of balls.
-Buffer.bind_to_storage_buffer is used to bind a buffer as storage buffer
-to a specific binding point specified in the compute program.
-In addition we render the balls using a geometry shader to easily
-batch draw them all in one render call.
-author: minu jeong
-modified by: einarf
+Buffer setup template suggested on mgl official repo : https://github.com/moderngl/moderngl/blob/master/examples/compute_shader_ssbo.py
 '''
 import weakref
 import numpy as np
 import os
 import moderngl_window as mglw
 from moderngl_window import Timer
-from PySide2.QtCore import Qt
-from PySide2.QtWidgets import QLabel, QPushButton, QGridLayout, QWidget, QSlider
 from PySide2.QtGui import QIcon
 
 from settings_widget import *
@@ -31,7 +20,7 @@ items_geo_shader = source(os.path.join(SHADER_DIRPATH, "items_geo.glsl"))
 items_fragment_shader_code = source(os.path.join(SHADER_DIRPATH, "items_fragment.glsl"))
 compute_worker_shader_code = source(os.path.join(SHADER_DIRPATH, "boids.glsl"))
 
-class ComputeShaderSSBO(mglw.WindowConfig):
+class CustomComputeShaderSSBO(mglw.WindowConfig):
     title = "Boids Compute Shader SSBO"
     gl_version = 4, 3  # Required opengl version
     window_size = 600, 600  # Initial window size
@@ -158,4 +147,4 @@ class ComputeShaderSSBO(mglw.WindowConfig):
 
 
 if __name__ == "__main__":
-    ComputeShaderSSBO.run()
+    CustomComputeShaderSSBO.run()
