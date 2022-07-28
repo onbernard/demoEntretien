@@ -11,3 +11,5 @@ via conda :
 ```
 conda env create -f environment.yml
 ```
+
+![capture](https://user-images.githubusercontent.com/39856221/181498733-b9f5c772-7fe8-45d6-a961-9a4a8cd1689e.png)
