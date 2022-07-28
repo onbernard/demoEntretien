@@ -1,0 +1,5 @@
+__pycache__/
+core/__pycache__/
+operators/__pycache__/
+*.py[cod]
+.vscode/
