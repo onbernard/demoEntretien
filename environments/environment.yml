@@ -8,4 +8,3 @@ dependencies:
   - moderngl
   - moderngl-window
   - pyside2
-prefix: C:\Users\emise\miniconda3\envs\mgl-env
